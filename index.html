@@ -7,8 +7,8 @@
 <meta name="description" content="김대환이 혼자 만든 앱과 게임. 아이폰과 안드로이드에서 바로 받아보세요.">
 <meta property="og:title" content="김대환 | 만든 앱 모음">
 <meta property="og:description" content="혼자 만든 앱과 게임을 한곳에서 받아보세요.">
-<meta property="og:image" content="icons/bomb-dodge.png">
-<link rel="icon" href="icons/nyong.png">
+<meta property="og:image" content="icons/me.jpg">
+<link rel="icon" href="icons/me.jpg">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root { --bg:#faf7f2; --ink:#16130f; --muted:#7a7268; --line:rgba(22,19,15,.1); --chip:#efe9df; --mix:86%; --btn:#16130f; --btn-ink:#fff; }
@@ -19,6 +19,9 @@
   body { margin:0; background:var(--bg); color:var(--ink);
     font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; }
   main { max-width:560px; margin:0 auto; padding:56px 20px 64px; }
+  .me { display:flex; align-items:center; gap:16px; margin-bottom:18px; }
+  .me img { width:92px; height:92px; border-radius:50%; object-fit:cover; flex:none; border:3px solid #ff6a1f; padding:3px; }
+  .me h1 { margin:6px 0 0; }
   .eyebrow { font-size:13px; font-weight:700; letter-spacing:.14em; color:var(--muted); }
   h1 { font-size:40px; line-height:1.1; font-weight:800; letter-spacing:-.03em; margin:8px 0 14px; }
   h1 span { color:#ff6a1f; }
@@ -50,8 +53,13 @@
 </head>
 <body>
 <main>
-  <div class="eyebrow">APPS &amp; GAMES</div>
-  <h1>김대환<span>.</span></h1>
+  <div class="me">
+    <img src="icons/me.jpg" alt="김대환">
+    <div>
+      <div class="eyebrow">APPS &amp; GAMES</div>
+      <h1>김대환<span>.</span></h1>
+    </div>
+  </div>
   <p class="lead">혼자서 앱과 게임을 만들고 있어요.<br>마음에 드는 게 있으면 받아서 해보세요.</p>
   <div class="links">
     <a href="https://www.youtube.com/@%EA%B9%80%EB%8C%80%ED%99%98-k6x">유튜브</a>
