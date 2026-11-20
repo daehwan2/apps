@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>뇽뇽이 앱 모음</title>
+</head>
+<body>
+<script src="apps.js"></script>
+<script>
+  // 앱별 바로가기: go.html?a=bomb-dodge → 기기에 맞는 스토어로 이동. PC 이거나 앱이 없으면 목록으로.
+  var id = new URLSearchParams(location.search).get("a");
+  var app = APPS.filter(function (x) { return x.id === id; })[0];
+  var url = app ? storeUrl(app, detectOS()) : "";
+  location.replace(url || "./");
+</script>
+</body>
+</html>
