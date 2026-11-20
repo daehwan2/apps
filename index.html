@@ -3,67 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>뇽뇽이 앱 모음</title>
-<meta name="description" content="뇽뇽이가 만든 앱과 게임을 한곳에서 받아보세요.">
-<meta property="og:title" content="뇽뇽이 앱 모음">
-<meta property="og:description" content="뇽뇽이가 만든 앱과 게임을 한곳에서 받아보세요.">
-<meta property="og:image" content="icons/nyong.png">
+<title>김대환 | 만든 앱 모음</title>
+<meta name="description" content="김대환이 혼자 만든 앱과 게임. 아이폰과 안드로이드에서 바로 받아보세요.">
+<meta property="og:title" content="김대환 | 만든 앱 모음">
+<meta property="og:description" content="혼자 만든 앱과 게임을 한곳에서 받아보세요.">
+<meta property="og:image" content="icons/bomb-dodge.png">
 <link rel="icon" href="icons/nyong.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-  :root { --bg:#f6f4fa; --card:#fff; --ink:#1d1828; --muted:#6f6a7d; --line:#e7e3ef; --accent:#ff7a3d; --btn-ink:#fff; }
+  :root { --bg:#faf7f2; --ink:#16130f; --muted:#7a7268; --line:rgba(22,19,15,.1); --chip:#efe9df; --mix:86%; --btn:#16130f; --btn-ink:#fff; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#16131e; --card:#221d2e; --ink:#f4f1fa; --muted:#a39db3; --line:#322b42; }
+    :root { --bg:#100e0c; --ink:#f6f1e9; --muted:#9c9488; --line:rgba(246,241,233,.12); --chip:#221e19; --mix:80%; --btn:#f6f1e9; --btn-ink:#100e0c; }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   body { margin:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif; }
-  main { max-width:520px; margin:0 auto; padding:40px 16px 56px; }
-  header { text-align:center; margin-bottom:28px; }
-  header img { width:88px; height:88px; border-radius:22px; }
-  h1 { font-size:26px; margin:14px 0 6px; }
-  header p { margin:0; color:var(--muted); font-size:15px; }
-  .app { display:flex; align-items:center; gap:14px; background:var(--card); border:1px solid var(--line);
-    border-radius:20px; padding:14px; margin-bottom:12px; }
-  .app img { width:64px; height:64px; border-radius:15px; flex:none; }
-  .info { flex:1; min-width:0; }
-  .name { font-weight:700; font-size:17px; }
-  .desc { color:var(--muted); font-size:13.5px; margin-top:3px; }
-  .btns { display:flex; flex-direction:column; gap:6px; flex:none; }
-  .btn { display:block; text-align:center; text-decoration:none; background:var(--accent); color:var(--btn-ink);
-    font-weight:700; font-size:14px; padding:10px 16px; border-radius:999px; white-space:nowrap; }
-  .btn.sub { background:transparent; color:var(--ink); border:1px solid var(--line); padding:8px 14px; font-size:13px; }
-  footer { text-align:center; color:var(--muted); font-size:12.5px; margin-top:28px; }
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:56px 20px 64px; }
+  .eyebrow { font-size:13px; font-weight:700; letter-spacing:.14em; color:var(--muted); }
+  h1 { font-size:clamp(52px,17vw,84px); line-height:1; font-weight:900; letter-spacing:-.04em; margin:10px 0 18px; }
+  h1 span { color:#ff6a1f; }
+  .lead { font-size:18px; line-height:1.55; margin:0; font-weight:500; text-wrap:balance; }
+  .links { display:flex; gap:8px; margin-top:20px; flex-wrap:wrap; }
+  .links a { font-size:14px; font-weight:600; color:var(--ink); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:8px 14px; }
+  .bar { display:flex; align-items:center; justify-content:space-between; margin:44px 0 14px; gap:12px; }
+  .count { font-size:14px; font-weight:700; color:var(--muted); }
+  .chips { display:flex; gap:6px; }
+  .chips button { font:inherit; font-size:14px; font-weight:700; border:0; border-radius:999px; padding:8px 14px; background:var(--chip); color:var(--muted); cursor:pointer; }
+  .chips button[aria-pressed="true"] { background:var(--ink); color:var(--bg); }
+  .app { position:relative; display:block; text-decoration:none; color:inherit; border-radius:28px; padding:20px; margin-bottom:14px; overflow:hidden;
+    background:color-mix(in srgb, var(--c) calc(100% - var(--mix)), var(--bg)); border:1px solid color-mix(in srgb, var(--c) 22%, transparent);
+    transition:transform .15s ease; }
+  .app:active { transform:scale(.98); }
+  .app::after { content:""; position:absolute; right:-70px; top:-70px; width:220px; height:220px; border-radius:50%;
+    background:color-mix(in srgb, var(--c) 22%, transparent); pointer-events:none; }
+  .top { display:flex; align-items:center; gap:16px; position:relative; z-index:1; }
+  .top img { width:84px; height:84px; border-radius:20px; flex:none; box-shadow:0 8px 20px color-mix(in srgb, var(--c) 40%, transparent); }
+  .tag { display:inline-block; font-size:12px; font-weight:800; color:var(--c); filter:saturate(1.2) brightness(.92); margin-bottom:4px; }
+  @media (prefers-color-scheme: dark) { .tag { filter:brightness(1.25); } }
+  .name { font-size:23px; font-weight:800; letter-spacing:-.02em; }
+  .desc { font-size:15px; color:var(--muted); margin-top:4px; line-height:1.4; }
+  .btns { display:flex; gap:8px; margin-top:18px; position:relative; z-index:1; }
+  .btn { flex:1; text-align:center; text-decoration:none; font-size:16px; font-weight:800; padding:14px 16px; border-radius:16px; background:var(--btn); color:var(--btn-ink); }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:36px; line-height:1.7; }
+  @media (min-width:900px) { main { max-width:920px; } #list { display:grid; grid-template-columns:1fr 1fr; gap:14px; } .app { margin:0; } }
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <img src="icons/nyong.png" alt="">
-    <h1>뇽뇽이 앱 모음</h1>
-    <p>직접 만든 앱과 게임이에요. 눌러서 바로 받아보세요.</p>
-  </header>
+  <div class="eyebrow">APPS &amp; GAMES</div>
+  <h1>김대환<span>.</span></h1>
+  <p class="lead">혼자서 앱과 게임을 만들고 있어요.<br>마음에 드는 게 있으면 받아서 해보세요.</p>
+  <div class="links">
+    <a href="https://www.youtube.com/@%EA%B9%80%EB%8C%80%ED%99%98-k6x">유튜브</a>
+  </div>
+  <div class="bar">
+    <div class="count" id="count"></div>
+    <div class="chips" id="chips"></div>
+  </div>
   <div id="list"></div>
-  <footer>아이폰은 앱스토어, 안드로이드는 플레이스토어로 연결돼요.</footer>
+  <footer>아이폰은 앱스토어, 안드로이드는 플레이스토어로 연결돼요.<br>© 김대환</footer>
 </main>
 <script src="apps.js"></script>
 <script>
-  var os = detectOS(), list = document.getElementById("list");
-  APPS.forEach(function (a) {
-    var btns = "";
-    var mine = storeUrl(a, os);
-    if (mine) btns = '<a class="btn" href="' + mine + '">받기</a>';
+  var os = detectOS(), list = document.getElementById("list"), filter = "전체";
+  function card(a) {
+    var mine = storeUrl(a, os), el, btns = "";
+    if (mine) { el = document.createElement("a"); el.href = mine; btns = '<span class="btn">받기</span>'; }
     else {
-      if (a.ios) btns += '<a class="btn sub" href="' + storeUrl(a, "ios") + '">App Store</a>';
-      if (a.android) btns += '<a class="btn sub" href="' + storeUrl(a, "android") + '">Google Play</a>';
+      el = document.createElement("div");
+      if (a.ios) btns += '<a class="btn" href="' + storeUrl(a, "ios") + '">App Store</a>';
+      if (a.android) btns += '<a class="btn" href="' + storeUrl(a, "android") + '">Google Play</a>';
     }
-    var el = document.createElement("div");
-    el.className = "app";
-    el.innerHTML = '<img src="icons/' + a.id + '.png" alt="">' +
-      '<div class="info"><div class="name"></div><div class="desc"></div></div><div class="btns">' + btns + '</div>';
+    el.className = "app"; el.style.setProperty("--c", a.color || "#888");
+    el.innerHTML = '<div class="top"><img src="icons/' + a.id + '.png" alt=""><div><span class="tag"></span>' +
+      '<div class="name"></div><div class="desc"></div></div></div><div class="btns">' + btns + '</div>';
+    el.querySelector(".tag").textContent = a.type;
     el.querySelector(".name").textContent = a.name;
     el.querySelector(".desc").textContent = a.desc;
-    list.appendChild(el);
+    return el;
+  }
+  function render() {
+    list.textContent = "";
+    var shown = APPS.filter(function (a) { return filter === "전체" || a.type === filter; });
+    shown.forEach(function (a) { list.appendChild(card(a)); });
+    document.getElementById("count").textContent = "만든 것 " + shown.length + "개";
+  }
+  ["전체", "게임", "앱"].forEach(function (t) {
+    var b = document.createElement("button"); b.textContent = t; b.setAttribute("aria-pressed", t === filter);
+    b.onclick = function () { filter = t; [].forEach.call(document.querySelectorAll("#chips button"), function (x) { x.setAttribute("aria-pressed", x === b); }); render(); };
+    document.getElementById("chips").appendChild(b);
   });
+  render();
 </script>
 </body>
 </html>
