@@ -2,6 +2,7 @@
 // type: "게임" 또는 "앱", color: 카드 색(아이콘 대표색).
 // ios: 앱스토어 숫자 ID, android: 패키지 이름. 아직 없는 스토어는 "" 로 둔다.
 window.APPS = [
+  { id: "building-smash", type: "게임", color: "#e23d3d", name: "건물 부수기", desc: "떨어지는 건물을 칼 한 자루로! 60스테이지 액션", ios: "", android: "com.buildingsmash.game" },
   { id: "bomb-dodge", type: "게임", color: "#ff8a2b", name: "폭탄피하기", desc: "터지기 전에 피해라! 50스테이지 도전", ios: "6835925150", android: "com.bombdodge.game" },
   { id: "nemo-count", type: "게임", color: "#5b7083", name: "네모 세기", desc: "숫자 합 퍼즐", ios: "6836317802", android: "com.nemocount.game" },
   { id: "fruits-bell", type: "게임", color: "#ff4f86", name: "후르츠 벨", desc: "실시간 1대1 종치기 대결", ios: "6791893061", android: "com.haligali.app" },
