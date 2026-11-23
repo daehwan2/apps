@@ -2,7 +2,7 @@
 // type: "게임" 또는 "앱", color: 카드 색(아이콘 대표색).
 // ios: 앱스토어 숫자 ID, android: 패키지 이름. 아직 없는 스토어는 "" 로 둔다.
 window.APPS = [
-  { id: "cat-lure", type: "게임", color: "#ffd23f", name: "고양이 꼬시기", desc: "간식 세 장이면 고양이가 온다! 혼자 하는 카드 게임 60판", ios: "", android: "com.catlure.game" },
+  { id: "cat-lure", type: "게임", color: "#ffd23f", name: "고양이 꼬시기", desc: "간식 세 장이면 고양이가 온다! 혼자 하는 카드 게임 60판", ios: "6837890797", android: "com.catlure.game" },
   { id: "tissue-toss", type: "게임", color: "#ffd23f", name: "휴지 버리기", desc: "바람을 읽고 휴지통에 쏙! 60판 던지기 게임", ios: "6837565461", android: "com.tissuetoss.game" },
   { id: "dino-sneak", type: "게임", color: "#2f7d76", name: "공룡 몰래 하기", desc: "공룡이 자는 동안만 살금살금! 60판 눈치 게임", ios: "6837283590", android: "com.dinosneak.game" },
   { id: "crusoe-escape", type: "게임", color: "#f5b82e", name: "무인도 탈출기", desc: "카드를 뒤집어 살아남는 무인도 탈출 카드 게임", ios: "", android: "com.crusoeescape.game" },
