@@ -3,7 +3,7 @@
 // ios: 앱스토어 숫자 ID, android: 패키지 이름. 아직 없는 스토어는 "" 로 둔다.
 window.APPS = [
   { id: "bag-check", type: "게임", color: "#4a5fc1", name: "수학여행 가방 검사", desc: "선생님이 되어 가방 속 숨긴 물건을 찾아라! 소지품 검사 60판", ios: "6838589372", android: "com.bagcheck.game" },
-  { id: "canal-village", type: "게임", color: "#2f62b5", name: "물길 마을", desc: "주사위 타일로 물길과 돌길을 잇는 퍼즐 60판", ios: "", android: "com.canalvillage.game" },
+  { id: "canal-village", type: "게임", color: "#2f62b5", name: "물길 마을", desc: "주사위 타일로 물길과 돌길을 잇는 퍼즐 60판", ios: "6838750364", android: "com.canalvillage.game" },
   { id: "cat-lure", type: "게임", color: "#ffd23f", name: "고양이 꼬시기", desc: "간식 세 장이면 고양이가 온다! 혼자 하는 카드 게임 60판", ios: "6837890797", android: "com.catlure.game" },
   { id: "tissue-toss", type: "게임", color: "#ffd23f", name: "휴지 버리기", desc: "바람을 읽고 휴지통에 쏙! 60판 던지기 게임", ios: "6837565461", android: "com.tissuetoss.game" },
   { id: "dino-sneak", type: "게임", color: "#2f7d76", name: "공룡 몰래 하기", desc: "공룡이 자는 동안만 살금살금! 60판 눈치 게임", ios: "6837283590", android: "com.dinosneak.game" },
